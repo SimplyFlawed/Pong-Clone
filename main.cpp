@@ -12,13 +12,6 @@
 #include <iostream>
 #include <sstream>
 
-#define DBOUT( s )            \
-{                             \
-   std::wostringstream os_;    \
-   os_ << s;                   \
-   OutputDebugStringW( os_.str().c_str() );  \
-}
-
 #define LOG(argument) std::cout << argument << '\n'
 #define STB_IMAGE_IMPLEMENTATION
 #define GL_SILENCE_DEPRECATION
@@ -165,7 +158,6 @@ bool is_collision(glm::vec3 obj_pos, glm::vec3 obj_scale, glm::vec3 other_pos, g
     float x_distance = fabs(obj_pos.x * obj_scale.x - other_pos.x * other_scale.x) - ((obj_scale.x + other_scale.x) / 2.0f);
     float y_distance = fabs(obj_pos.y * obj_scale.y - other_pos.y * other_scale.y) - ((obj_scale.y + other_scale.y) / 2.0f);
 
-    //DBOUT(x_distance << " " << y_distance << "\n");
     if (x_distance < 0.0f && y_distance < 0.0f)
     {
         return true;
