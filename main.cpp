@@ -8,10 +8,6 @@
 * Academic Misconduct.
 **/
 
-#include <Windows.h>
-#include <iostream>
-#include <sstream>
-
 #define LOG(argument) std::cout << argument << '\n'
 #define STB_IMAGE_IMPLEMENTATION
 #define GL_SILENCE_DEPRECATION
